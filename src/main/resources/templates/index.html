@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+  <title>WebJars Demo</title>
+  <link rel="stylesheet"
+        href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css" />
+</head>
+<body>
+<div class="input-group input-group-lg">
+  <input type="text" class="form-control" placeholder="Pattern" name="pattern"/>
+  <button type="button" class="btn btn-default">Add Rule</button>
+</div>
+<h3 th:text="Current Rules"/>
+<table class="table">
+  <tr th:each="rule : ${rules}">
+    <td th:text="${rule.id}"></td>
+    <td th:text="${rule.priority}"></td>
+    <td th:text="${rule.pattern}"></td>
+  </tr>
+</table>
+</body>
+</html>
