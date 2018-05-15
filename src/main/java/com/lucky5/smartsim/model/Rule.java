@@ -41,4 +41,6 @@ public class Rule {
     public void setKeyPattern(String keyPattern) {
         this.keyPattern = keyPattern;
     }
+
+    public long getId() { return this.id; }
 }
